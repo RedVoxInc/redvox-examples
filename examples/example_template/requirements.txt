@@ -1,0 +1,4 @@
+# Feel free to provides a requirements.txt file per example.
+# This helps us see exactly which dependencies each example relies on instead of using one monolithic requirements file.
+
+redvox==3.1.13
