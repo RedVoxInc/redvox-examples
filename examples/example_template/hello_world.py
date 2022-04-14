@@ -17,7 +17,7 @@ def say_hello(name: str) -> str:
 
 def main() -> None:
     # Document complicated pieces of code
-    print("hello, world.")
+    print(say_hello("HAL"))
 
 
 if __name__ == "__main__":
