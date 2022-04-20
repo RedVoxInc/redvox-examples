@@ -4,7 +4,7 @@ A repository for case-studies, examples, and tutorials
 
 ### Creating a new example
 
-1. Create a new directory under `examples` with an appropriate name for the example
+1. Create a new python package under `examples` with an appropriate name for the example
 2. Ensure this new directory has an empty `__init__.py` file
 3. Add a README.md that describes the example (see [examples/example_template/README.md](examples/README.md))
 4. Add the example code. Follow standard documentation rules (see [examples/example_template/hello_world.py](examples/example_template/hello_world.py))
