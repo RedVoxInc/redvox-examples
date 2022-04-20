@@ -2,6 +2,8 @@
 Start from report page at:
 https://redvox.io/#/reports/redvoxcore@12Apr22.02.48.36
 
+Must log into the webpage as `redvoxcore`.
+
 Load audio waveform data from:
 Time aligned and corrected data window
 
