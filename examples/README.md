@@ -23,6 +23,7 @@ RedVox Software Developer Kit (SDK). Available online: https://github.com/RedVox
 
 Garcés, M. A., D. Bowman, C. Zeiler, A. Christe, T. Yoshiyama, 
 B. Williams, M. Colet, S. Takazawa, S. Popenhagen. 
+
 Skyfall: Signal Fusion from a Smartphone Falling from the Stratosphere, 
 Signals Special Issue: Internet of Things for Smart Planet: Present and Future, 2022, 
 3(2), 209-234; https://doi.org/10.3390/signals3020014
