@@ -2,6 +2,10 @@
 
 Load station metadata such as os, make and model, and State of Health sensor from DataWindow.
 
+For more information on getting started with the RedVox SDk, visit the docs at:
+[https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk#-redvox-python-sdk-manual](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk#-redvox-python-sdk-manual)
+.
+
 ### Setup
 
 See requirements.txt
