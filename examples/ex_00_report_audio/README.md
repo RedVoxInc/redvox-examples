@@ -13,7 +13,10 @@ See requirements.txt
 ### Obtaining Data
 
 Start from report page at:
+old:
 https://redvox.io/#/reports/redvoxcore@12Apr22.02.48.36
+new:
+https://redvox.io/#/reports/E328
 
 Must log into the webpage as `redvoxcore`.
 
