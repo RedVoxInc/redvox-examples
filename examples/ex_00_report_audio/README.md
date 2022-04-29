@@ -2,37 +2,44 @@
 
 Load audio waveform data from time aligned and corrected data window in a RedVox Report
 
-For more information on getting started with the RedVox SDk, visit the docs at:
-https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk#-redvox-python-sdk-manual.
+For more information on getting started with the RedVox SDk, visit the 
+[RedVox SDK Manual](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk#-redvox-python-sdk-manual).
 
 ### Setup
 
-See requirements.txt
-- put dependencies here pip and/or put link to download instructions
+You will need the RedVox SDK to run this example. The SDK can be installed running:
+```shell
+pip install redvox --upgrade
+```
+For more instruction on installing the SDK, visit 
+[RedVox SDK Installation](https://github.com/RedVoxInc/redvox-python-sdk/blob/master/docs/python_sdk/installation.md#-redvox-sdk-installation).
+
+You will also need the Matplotlib library to plot the graphs. You can find installation instructions in 
+[Matplotlib Installation](https://matplotlib.org/stable/users/installing/index.html). 
 
 ### Obtaining Data
 
 Start from report page at:
-old:
-https://redvox.io/#/reports/redvoxcore@12Apr22.02.48.36
-new:
 https://redvox.io/#/reports/E328
 
-Must log into the webpage as `redvoxcore`.
+In Additional Products, click in the Time aligned and corrected data window.
 
-Download:
-Time aligned and corrected data window.
-Place compressed, serialized dw.xxx.pkl.lz4 file in a folder outside the repository
+<p align="center">
+<img src="additional_products_img.png">
+</p>
+
+A file named _dw_1648830257000498_2.pkl.lz4_ will start to download. 
 
 ### Running the Example
 
-Change input_dir to point to your data directory
-input_dir = "YOUR_DIRECTORY_PATH"
+In load_audio.py, change input_dir (line 22) to point to your data directory where the DataWindow file 
+_dw_1648830257000498_2.pkl.lz4_ is located.
 
 ### Example Output
 
 <p align="center">
-<img src="https://github.com/RedVoxInc/redvox-examples/blob/main/examples/ex_00_report_audio/figs/fig_ex_00.png?raw=true">
+<img src="fig_ex_00.png">
 </p>
+
 
 

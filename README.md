@@ -6,7 +6,6 @@ and [pandas pipeline](https://github.com/RedVoxInc/redpandas).
 We recommend you start with the [first example (ex_00 report_audio)](https://github.com/RedVoxInc/redvox-examples/tree/main/examples/ex_00_report_audio),
 which loads audio data from a Redvox report downloaded from [redvox.io](https://redvox.io/#/reports/E328).
 
-Things to add:
 ### Gettin started
 How to run examples:
 -clone repo
