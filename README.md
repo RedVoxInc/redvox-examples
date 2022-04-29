@@ -4,7 +4,7 @@ This repository is for case-studies, examples, and tutorials using the [redvox S
 and [pandas pipeline](https://github.com/RedVoxInc/redpandas).
 
 We recommend you start with the [first example (ex_00 report_audio)](https://github.com/RedVoxInc/redvox-examples/tree/main/examples/ex_00_report_audio),
-which loads audio data from a Redvox report downloaded from [redvox.io](https://redvox.io/#/reports/E328).
+which loads audio data from a [Redvox report downloaded from redvox.io](https://redvox.io/#/reports/E328).
 
 ### Getting started
 How to run examples:
@@ -19,16 +19,12 @@ Examples focused on using the RedVox SDK:
 3. [Loading Metadata and State of Health data from a RedVox Report](https://github.com/RedVoxInc/redvox-examples/tree/main/examples/ex_03_metadata_and_soh#example-03-accessing-station-metadata-and-state-of-health)
 
 Examples focused on using RedPandas:
-
 4. [Plotting wiggles from Audio data](https://github.com/RedVoxInc/redvox-examples/tree/main/examples/ex_04_plot_wiggles_audio#example-04-plot-audio-wiggles)
 5. [Plotting spectrograms from Audio data](https://github.com/RedVoxInc/redvox-examples/tree/main/examples/ex_05_plot_spectrogram_audio#example-05-plot-audio-spectrogram)
 
-[//]: # (Please note that you must have an [account on redvox.io]&#40;https://redvox.io/#/login&#41; in order to access the data.  You may )
-
-[//]: # ([sign up for a free account here]&#40;https://redvox.io/#/registration&#41;.)
-
 ### Contributors
-Refer to the [guidelines](https://github.com/RedVoxInc/redvox-examples/blob/main/README_guidelines.md) on how to add examples to this repository.
+If you would like to contribue to this repository, please refer to the
+[guidelines](https://github.com/RedVoxInc/redvox-examples/blob/main/README_guidelines.md).
 
 ## References
 
@@ -37,8 +33,6 @@ RedVox Application Programming Interface (API). Available online: https://github
 RedVox Software Developer Kit (SDK). Available online: https://github.com/RedVoxInc/redvox-python-sdk
 
 Garcés, M. A., D. Bowman, C. Zeiler, A. Christe, T. Yoshiyama,
-B. Williams, M. Colet, S. Takazawa, S. Popenhagen.
-
-Skyfall: Signal Fusion from a Smartphone Falling from the Stratosphere,
+B. Williams, M. Colet, S. Takazawa, S. Popenhagen. Skyfall: Signal Fusion from a Smartphone Falling from the Stratosphere,
 Signals Special Issue: Internet of Things for Smart Planet: Present and Future, 2022,
 3(2), 209-234; https://doi.org/10.3390/signals3020014

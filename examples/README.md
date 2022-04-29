@@ -7,3 +7,7 @@ Present-day smartphone audio systems are able to record at 192 kHz,
 corresponding to a sampling interval of 5.2 microseconds. 
 Throughout this work, the native unit of time for computations is represented as the epoch time in microseconds.
 
+
+### Accessing data on redvox.io
+Please note that you may need an [account on redvox.io](https://redvox.io/#/login) in order to access certain data.  
+You may [sign up for a free account here](https://redvox.io/#/registration).
