@@ -8,6 +8,7 @@ https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk#-redv
 ### Setup
 
 See requirements.txt
+- put dependencies here pip and/or put link to download instructions
 
 ### Obtaining Data
 
