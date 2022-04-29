@@ -22,7 +22,7 @@ MICROS_TO_S = 1E-6
 input_dir = '/Users/meritxell/Desktop'
 
 # Name of the REdVox datawindow file you downloaded:
-input_file = "dw_1647024780000029_2.pkl.lz4"
+input_file = "dw_1648830257000498_2.pkl.lz4"
 
 
 def main() -> None:
