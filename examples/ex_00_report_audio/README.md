@@ -31,5 +31,5 @@ input_dir = "YOUR_DIRECTORY_PATH"
 <p align="center">
 <img src="https://github.com/RedVoxInc/redvox-examples/blob/main/examples/ex_00_report_audio/figs/fig_ex_00.png?raw=true">
 </p>
-![](examples/ex_00_report_audio/figs/fig_ex_00.png)
+
 
