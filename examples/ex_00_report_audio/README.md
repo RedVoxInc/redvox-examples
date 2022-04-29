@@ -9,7 +9,7 @@ For more information on getting started with the RedVox SDk, visit the
 
 You will need the RedVox SDK to run this example. The SDK can be installed running:
 ```shell
-pip install redvox --upgrade
+pip install redvox==3.1.13
 ```
 For more instruction on installing the SDK, visit 
 [RedVox SDK Installation](https://github.com/RedVoxInc/redvox-python-sdk/blob/master/docs/python_sdk/installation.md#-redvox-sdk-installation).
