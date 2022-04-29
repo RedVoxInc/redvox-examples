@@ -25,7 +25,7 @@ https://redvox.io/#/reports/E328
 In Additional Products, click in the Time aligned and corrected data window.
 
 <p align="center">
-<img src="additional_products_img.png" width="600">
+<img src="additional_products_img.png" width="650">
 </p>
 
 A file named _dw_1648830257000498_2.pkl.lz4_ will start to download. 
