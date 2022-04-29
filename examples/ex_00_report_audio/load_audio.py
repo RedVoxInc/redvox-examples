@@ -2,8 +2,8 @@
 Start from report page at:
 https://redvox.io/#/reports/E328
 
-Load audio waveform data from:
-Time aligned and corrected data window
+Load audio waveform data from a
+time aligned and corrected data window
 
 """
 import os
@@ -15,17 +15,16 @@ print(__doc__)
 # CONSTANT: Convert from native microseconds to seconds
 MICROS_TO_S = 1E-6
 
-# Change input_dir to point to your data directory
-# input_dir = "/Users/mgarces/Documents/DATA_2022/WAMV_EXAMPLE"
-input_dir = '/Users/meritxell/Desktop'
+# Change input_dir the path of your data directory
+input_dir = "/CHANGE/ME/DATA_2022/WAMV_EXAMPLE"
 
-# Name of the REdVox datawindow file you downloaded:
-input_file = "dw_1648830257000498_2.pkl.lz4"
+# Name of the RedVox data window file you downloaded:
+INPUT_FILE = "dw_1648830257000498_2.pkl.lz4"
 
 
 def main() -> None:
-    # Load datawindow from report
-    dw = DataWindow.deserialize(os.path.join(input_dir, input_file))
+    # Load data window from report
+    dw = DataWindow.deserialize(os.path.join(input_dir, INPUT_FILE))
 
     print("\n All native timestamps are in microseconds since Unix epoch UTC")
     for station in dw.stations():
