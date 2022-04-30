@@ -7,13 +7,26 @@ We recommend you start with the [first example (ex_00 report_audio)](https://git
 which loads audio data from a [Redvox report downloaded from redvox.io](https://redvox.io/#/reports/E328).
 
 ### Getting started
-How to run examples:
--clone repo
--.zip download
+How to get the examples onto your computer:
+
+- If you have access to Git, you can clone the entire examples repository
+  - Find the green code button above and to the right of this readme.  Click on it to view more options.  
+    Refer to the screenshot below.
+  - <img src="img/main_page_code.png">
+  - Choose the connection type to clone with, then click on the overlapping squares to the right of the textbox to copy 
+    the string to your clipboard.  Refer to the screenshot below.
+  - <img src="img/sub_menu_clone.png">
+  - Input the copied string into your preferred method of programming with Git.  The repository will be copied onto 
+    your machine for you to edit.
+
+- If you don't have access to Git, you may download a zipped version of this repository.
+  - Find the green code button above and to the right of this readme.  Click on it to view more options.
+  - Choose the bottom option to download the repository as a .zip file.  Refer to the screenshot below.
+  - <img src="img/sub_menu_zip_dl.png">
+  - Find the downloaded file and unzip it to your working directory using your preferred method.
 
 ### Examples
 Examples focused on using the RedVox SDK:
-
 
 0. [Loading the Audio data from a RedVox Report](https://github.com/RedVoxInc/redvox-examples/tree/main/examples/ex_00_report_audio)
 1. [Loading the Accelerometer data from a RedVox Report](https://github.com/RedVoxInc/redvox-examples/tree/main/examples/ex_01_report_accelerometer#example-01-accelerometer-waveforms-from-redvox-report-datawindow)
