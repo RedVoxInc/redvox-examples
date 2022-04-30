@@ -13,6 +13,8 @@ How to run examples:
 
 ### Examples
 Examples focused on using the RedVox SDK:
+
+
 0. [Loading the Audio data from a RedVox Report](https://github.com/RedVoxInc/redvox-examples/tree/main/examples/ex_00_report_audio)
 1. [Loading the Accelerometer data from a RedVox Report](https://github.com/RedVoxInc/redvox-examples/tree/main/examples/ex_01_report_accelerometer#example-01-accelerometer-waveforms-from-redvox-report-datawindow)
 2. [Loading other sensors from a RedVox Report](https://github.com/RedVoxInc/redvox-examples/tree/main/examples/ex_02_other_sensors#example-02-other-sensors-in-the-redvox-report-datawindow)
