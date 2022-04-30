@@ -16,10 +16,11 @@ How to get the examples onto your computer:
     the string to your clipboard.  Refer to the screenshot below.  <p align="center"><img src="img/sub_menu_clone.png" width="500"></p>
   3. Input the copied string into your preferred method of programming with Git.  The repository will be copied onto 
     your machine for you to edit.
-
-  For more details on cloning repositories, please check 
-  [Instructions on how to clone a GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository).
-
+  - Refer to the [Github help docs on cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+    as needed.
+  - The screenshot assumes the user has an SSH key associated with Github.  Refer to the
+    [Github help docs on uploading an SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+    as needed.
 
 - If you don't have access to Git, you may download a zipped version of this repository.
   1. Find the green code button above and to the right of this readme.  Click on it to view more options.
@@ -42,7 +43,7 @@ Examples focused on using RedPandas:
 5. [Plotting spectrograms from Audio data](https://github.com/RedVoxInc/redvox-examples/tree/main/examples/ex_05_plot_spectrogram_audio#example-05-plot-audio-spectrogram)
 
 ### Contributors
-If you would like to contribue to this repository, please refer to the
+If you would like to contribute to this repository, please refer to the
 [guidelines](https://github.com/RedVoxInc/redvox-examples/blob/main/README_guidelines.md).
 
 ## References
