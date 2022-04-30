@@ -2,30 +2,43 @@
 
 Load station metadata such as os, make and model, and State of Health sensor from DataWindow.
 
-For more information on getting started with the RedVox SDk, visit the docs at:
-[https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk#-redvox-python-sdk-manual](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk#-redvox-python-sdk-manual)
-.
+For more information on getting started with the RedVox SDK, visit the
+[RedVox SDK Manual](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk#-redvox-python-sdk-manual).
 
 ### Setup
 
-See requirements.txt
+You will need the RedVox SDK to run this example. The SDK can be installed by running:
+```shell
+pip install redvox==3.1.13
+```
+in a terminal with python enabled.
+
+For more instructions on installing the SDK, please visit
+[RedVox SDK Installation](https://github.com/RedVoxInc/redvox-python-sdk/blob/master/docs/python_sdk/installation.md#-redvox-sdk-installation).
+
+You will also need the Matplotlib library to plot the graphs. You can find installation instructions in
+[Matplotlib Installation](https://matplotlib.org/stable/users/installing/index.html).
 
 ### Obtaining Data
 
 Start from report page at:
-https://redvox.io/#/reports/redvoxcore@12Apr22.02.48.36
+https://redvox.io/#/reports/E328
 
-Must log into the webpage as `redvoxcore`.
+In Additional Products, click the `Time aligned and corrected data window` link.
 
-Download:
-Time aligned and corrected data window.
-Place compressed, serialized dw.xxx.pkl.lz4 file in a folder outside the repository
+<p align="center">
+<img src="img/additional_products_img.png" width="650">
+</p>
+
+A file named `dw_1648830257000498_2.pkl.lz4` will start to download.
 
 ### Running the Example
 
-Change input_dir to point to your data directory
-input_dir = "YOUR_DIRECTORY_PATH"
+In load_metadata_soh.py, change input_dir (line 19) to the directory where the downloaded file
+`dw_1648830257000498_2.pkl.lz4` is located.
 
 ### Example Output
 
-Link to figure(s)
+<p align="center">
+<img src="img/fig_ex_03.png">
+</p>

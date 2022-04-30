@@ -1,8 +1,6 @@
 """
 Start from report page at:
-https://redvox.io/#/reports/redvoxcore@12Apr22.02.48.36
-
-Must log into the webpage as `redvoxcore`.
+https://redvox.io/#/reports/E328
 
 Load other sensor waveform data from:
 Time aligned and corrected data window
@@ -22,16 +20,16 @@ MICROS_TO_S = 1E-6
 input_dir = "/Users/meritxell/Desktop"
 
 # Name of the REdVox datawindow file you downloaded:
-input_file = "dw_1647024780000029_2.pkl.lz4"
+input_file = "dw_1648830257000498_2.pkl.lz4"
 
 
 def main() -> None:
     # Load datawindow from report
     dw = DataWindow.deserialize(os.path.join(input_dir, input_file))
 
-    print("\n All native timestamps are in microseconds since Unix epoch UTC")
+    print("\nAll native timestamps are in microseconds since Unix epoch UTC")
     for station in dw.stations():
-        print('Single channel sensors such as barometer load the same as audio')
+        print('\nSingle channel sensors such as barometer load the same as audio')
         # Check that there is barometer data in the first place
         if station.has_barometer_data():
 
@@ -58,33 +56,34 @@ def main() -> None:
         plt.xlabel(f"Seconds from {int(dw.start_date()*MICROS_TO_S)} Unix epoch UTC")
         plt.ylabel("Raw Pressure [kPa]")
 
-        print('Multi-channel sensors such as gyroscope load the same as the accelerometer sensor')
-        # Check that there is gyroscope data in the first place
-        if station.has_gyroscope_data():
+        print('\nMulti-channel sensors such as magnetometer load the same as the accelerometer sensor')
+        # Check that there is magnetometer data in the first place
+        
+        if station.has_magnetometer_data():
 
-            print(f"Station {station.id()} Gyroscope Sensor:\n"
-                  f"gyroscope computed sample rate in hz: {station.gyroscope_sensor().sample_rate_hz()}\n"
-                  f"gyroscope sample interval in seconds: {station.gyroscope_sensor().sample_interval_s()}\n"
-                  f"gyroscope sample interval std dev: {station.gyroscope_sensor().sample_interval_std_s()}\n"
-                  f"the first data timestamp: {station.gyroscope_sensor().first_data_timestamp()}\n"
-                  f"the last data timestamp:  {station.gyroscope_sensor().last_data_timestamp()}\n"
-                  f"the number of data samples: {station.gyroscope_sensor().num_samples()}\n"
-                  f"the names of the dataframe columns: {station.gyroscope_sensor().data_channels()}\n")
+            print(f"Station {station.id()} Magnetometer Sensor:\n"
+                  f"magnetometer computed sample rate in hz: {station.magnetometer_sensor().sample_rate_hz()}\n"
+                  f"magnetometer sample interval in seconds: {station.magnetometer_sensor().sample_interval_s()}\n"
+                  f"magnetometer sample interval std dev: {station.magnetometer_sensor().sample_interval_std_s()}\n"
+                  f"the first data timestamp: {station.magnetometer_sensor().first_data_timestamp()}\n"
+                  f"the last data timestamp:  {station.magnetometer_sensor().last_data_timestamp()}\n"
+                  f"the number of data samples: {station.magnetometer_sensor().num_samples()}\n"
+                  f"the names of the dataframe columns: {station.magnetometer_sensor().data_channels()}\n")
 
-        # Gyroscope has 3 channels - x, y and z
-        gyroscope_x_samples = station.gyroscope_sensor().get_gyroscope_x_data()
-        gyroscope_y_samples = station.gyroscope_sensor().get_gyroscope_y_data()
-        gyroscope_z_samples = station.gyroscope_sensor().get_gyroscope_z_data()
+        # Magnetometer has 3 channels - x, y and z
+        magnetometer_x_samples = station.magnetometer_sensor().get_magnetometer_x_data()
+        magnetometer_y_samples = station.magnetometer_sensor().get_magnetometer_y_data()
+        magnetometer_z_samples = station.magnetometer_sensor().get_magnetometer_z_data()
         # The channels share the same timestamps
-        gyroscope_time_micros = station.gyroscope_sensor().data_timestamps() - \
-                                    station.gyroscope_sensor().first_data_timestamp()
-        gyroscope_time_s = gyroscope_time_micros*MICROS_TO_S
+        magnetometer_time_micros = station.magnetometer_sensor().data_timestamps() - \
+                                    station.magnetometer_sensor().first_data_timestamp()
+        magnetometer_time_s = magnetometer_time_micros*MICROS_TO_S
 
         # Plot the acceleration data - one subplot per channel
         fig, ax = plt.subplots(nrows=3, ncols=1, sharex='col')
-        ax[0].plot(gyroscope_time_s, gyroscope_x_samples)
-        ax[1].plot(gyroscope_time_s, gyroscope_y_samples)
-        ax[2].plot(gyroscope_time_s, gyroscope_z_samples)
+        ax[0].plot(magnetometer_time_s, magnetometer_x_samples)
+        ax[1].plot(magnetometer_time_s, magnetometer_y_samples)
+        ax[2].plot(magnetometer_time_s, magnetometer_z_samples)
 
         # Set labels and subplot title
         ax[0].set_ylabel('Gyr X [m/s]')

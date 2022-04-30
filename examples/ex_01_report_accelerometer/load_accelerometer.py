@@ -1,8 +1,6 @@
 """
 Start from report page at:
-https://redvox.io/#/reports/redvoxcore@12Apr22.02.48.36
-
-Must log into the webpage as `redvoxcore`.
+https://redvox.io/#/reports/E328
 
 Load accelerometer waveform data from:
 Time aligned and corrected data window
@@ -22,7 +20,7 @@ MICROS_TO_S = 1E-6
 input_dir = "/Users/meritxell/Desktop"
 
 # Name of the REdVox datawindow file you downloaded:
-input_file = "dw_1647024780000029_2.pkl.lz4"
+input_file = "dw_1648830257000498_2.pkl.lz4"
 
 
 def main() -> None:
