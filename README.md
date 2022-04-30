@@ -13,7 +13,7 @@ How to get the examples onto your computer:
   - Find the green code button above and to the right of this readme.  Click on it to view more options.  
     Refer to the screenshot below.  <p align="center"><img src="img/main_page_code.png"></p>
     Choose the connection type to clone with, then click on the overlapping squares to the right of the textbox to copy 
-    the string to your clipboard.  Refer to the screenshot below.  <p align="center"><img src="img/sub_menu_clone.png"></p>
+    the string to your clipboard.  Refer to the screenshot below.  <p align="center"><img src="img/sub_menu_clone.png" width="500"></p>
     Input the copied string into your preferred method of programming with Git.  The repository will be copied onto 
     your machine for you to edit.
 
@@ -21,7 +21,7 @@ How to get the examples onto your computer:
 - If you don't have access to Git, you may download a zipped version of this repository.
   - Find the green code button above and to the right of this readme.  Click on it to view more options.
     Choose the bottom option to download the repository as a .zip file.  Refer to the screenshot below.  
-    <p align="center"><img src="img/sub_menu_zip_dl.png"></p>
+    <p align="center"><img src="img/sub_menu_zip_dl.png" width="500"></p>
     Find the downloaded file and unzip it to your working directory using your preferred method.
 
 ### Examples
