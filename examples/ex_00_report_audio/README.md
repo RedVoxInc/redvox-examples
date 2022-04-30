@@ -1,17 +1,19 @@
 # Example 00: Audio waveforms from RedVox report DataWindow
 
-Load audio waveform data from time aligned and corrected data window in a RedVox Report
+Load an audio waveform data from a time aligned and corrected data window in a RedVox Report
 
-For more information on getting started with the RedVox SDk, visit the 
+For more information on getting started with the RedVox SDK, visit the 
 [RedVox SDK Manual](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk#-redvox-python-sdk-manual).
 
 ### Setup
 
-You will need the RedVox SDK to run this example. The SDK can be installed running:
+You will need the RedVox SDK to run this example. The SDK can be installed by running:
 ```shell
 pip install redvox==3.1.13
 ```
-For more instruction on installing the SDK, visit 
+in a terminal with python enabled.
+
+For more instructions on installing the SDK, please visit 
 [RedVox SDK Installation](https://github.com/RedVoxInc/redvox-python-sdk/blob/master/docs/python_sdk/installation.md#-redvox-sdk-installation).
 
 You will also need the Matplotlib library to plot the graphs. You can find installation instructions in 
@@ -22,23 +24,23 @@ You will also need the Matplotlib library to plot the graphs. You can find insta
 Start from report page at:
 https://redvox.io/#/reports/E328
 
-In Additional Products, click in the Time aligned and corrected data window.
+In Additional Products, click the `Time aligned and corrected data window` link.
 
 <p align="center">
-<img src="additional_products_img.png" width="650">
+<img src="img/additional_products_img.png" width="650">
 </p>
 
-A file named _dw_1648830257000498_2.pkl.lz4_ will start to download. 
+A file named `dw_1648830257000498_2.pkl.lz4` will start to download. 
 
 ### Running the Example
 
-In load_audio.py, change input_dir (line 22) to point to your data directory where the DataWindow file 
-_dw_1648830257000498_2.pkl.lz4_ is located.
+In load_audio.py, change input_dir (line 19) to the directory where the downloaded file 
+`dw_1648830257000498_2.pkl.lz4` is located.
 
 ### Example Output
 
 <p align="center">
-<img src="fig_ex_00.png">
+<img src="img/fig_ex_00.png">
 </p>
 
 
