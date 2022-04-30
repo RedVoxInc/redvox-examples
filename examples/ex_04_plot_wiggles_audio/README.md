@@ -2,7 +2,7 @@
 
 Plot station wiggles for audio from time aligned and corrected data window in a RedVox Report.
 
-For more information on getting started with redpandas, visit the
+For more information on getting started with RedPandas, visit the
 [RedPandas Documentation](https://github.com/RedVoxInc/redpandas/blob/master/docs/redpandas/using_redpandas.md#how-to-use-redpandas).
 
 
