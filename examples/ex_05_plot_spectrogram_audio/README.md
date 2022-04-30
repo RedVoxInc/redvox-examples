@@ -2,9 +2,8 @@
 
 Plot station spectrogram for audio from time aligned and corrected data window in a RedVox Report.
 
-For more information on getting started with redpandas, visit the
+For more information on getting started with RedPandas, visit the
 [RedPandas Documentation](https://github.com/RedVoxInc/redpandas/blob/master/docs/redpandas/using_redpandas.md#how-to-use-redpandas).
-
 
 For more information on plotting other sensors and options, visit the
 [RedPandas Advanced Documentation](https://github.com/RedVoxInc/redpandas/blob/master/docs/redpandas/advance_use_redpandas.md#how-to-use-redpandas---advanced-data-manipulation).
