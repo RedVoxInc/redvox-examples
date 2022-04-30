@@ -1,8 +1,6 @@
 """
 Start from report page at:
-https://redvox.io/#/reports/redvoxcore@12Apr22.02.48.36
-
-Must log into the webpage as `redvoxcore`.
+https://redvox.io/#/reports/E328
 
 Plot report audio wiggles from:
 Time aligned and corrected data window
@@ -27,7 +25,7 @@ MICROS_TO_S = 1E-6
 input_dir = "/Users/meritxell/Desktop"
 
 # Name of the REdVox datawindow file you downloaded:
-input_file = "dw_1647024780000029_2.pkl.lz4"
+input_file = "dw_1648830257000498_2.pkl.lz4"
 
 
 def main() -> None:
@@ -40,8 +38,6 @@ def main() -> None:
     rp_df = redpd_dataframe(input_dw=dw,
                             sensor_labels=['audio'])
     print(f'Available columns in RedPandas:\n{rp_df.columns.values}')
-    print('For more info on redpandas, visit '
-          'https://github.com/RedVoxInc/redpandas/blob/master/docs/redpandas/using_redpandas.md#how-to-use-redpandas')
 
     # Plot wiggles
     plot_wiggles_pandas(df=rp_df,  # the name of the redpandas dataframe, in this case rp_df
@@ -52,9 +48,6 @@ def main() -> None:
                         )
 
     plt.show()
-    print('\nFor more information on plotting other sensors and options, visit the RedPandas Docs: '
-          'https://github.com/RedVoxInc/redpandas/blob/master/docs/redpandas/advance_use_redpandas.'
-          'md#how-to-use-redpandas---advanced-data-manipulation ')
 
 
 if __name__ == "__main__":
