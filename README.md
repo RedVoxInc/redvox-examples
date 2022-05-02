@@ -10,23 +10,24 @@ which loads audio data from a [Redvox report downloaded from redvox.io](https://
 How to get the examples onto your computer:
 
 - If you have access to Git, you can clone the entire examples repository
-  1. Find the green code button above and to the right of this readme.  Click on it to view more options.  
+  1. Find the green code button above this readme.  It will be on the right.  Click on it to view more options.  
     Refer to the screenshot below.  <p align="center"><img src="img/main_page_code.png"></p>
-  2. Choose the connection type to clone with, then click on the overlapping squares to the right of the textbox to copy 
-    the string to your clipboard.  Refer to the screenshot below.  <p align="center"><img src="img/sub_menu_clone.png" width="500"></p>
-  3. Input the copied string into your preferred method of programming with Git.  The repository will be copied onto 
+  2. Choose the connection type to clone with, then click on the button to the right of the textbox to copy 
+    the string to your clipboard.  Refer to the screenshot below.  <p align="center"><img src="img/sub_menu_connect_type.png" width="500"></p>
+  3. Input the copied string into your preferred method of using Git.  The repository will be copied onto 
     your machine for you to edit.
   
   Please note:
    - Refer to the [Github help docs on cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
      as needed.
-   - The screenshot assumes the user has an SSH key associated with Github.  Refer to the
+   - If using the SSH option, you need an SSH key associated with Github.  Refer to the
      [Github help docs on uploading an SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
      as needed.
 
 - If you don't have access to Git, you may download a zipped version of this repository.
-  1. Find the green code button above and to the right of this readme.  Click on it to view more options.
-  2. Choose the bottom option to download the repository as a .zip file.  Refer to the screenshot below. <p align="center"><img src="img/sub_menu_zip_dl.png" width="500"></p>
+  1. Find the green code button above this readme.  Click on it to view more options.
+  2. Choose the bottom option to download the repository as a .zip file.  Refer to the screenshot below. 
+     <p align="center"><img src="img/sub_menu_zip_dl.png" width="500"></p>
   3. Find the downloaded file and unzip it to your working directory using your preferred method.
 
 ### Examples
