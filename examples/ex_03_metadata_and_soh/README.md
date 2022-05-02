@@ -1,6 +1,6 @@
 # Example 03: Accessing Station metadata and State of Health
 
-Load station metadata such as os, make and model, and State of Health sensor from DataWindow.
+Load station metadata such as OS, make, model, and State of Health sensor from DataWindow.
 
 For more information on getting started with the RedVox SDK, visit the
 [RedVox SDK Manual](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk#-redvox-python-sdk-manual).
