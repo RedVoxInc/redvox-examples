@@ -16,7 +16,9 @@ print(__doc__)
 MICROS_TO_S = 1E-6
 
 # Change input_dir the path of your data directory
-input_dir = "/CHANGE/ME/DATA_2022/WAMV_EXAMPLE"
+# input_dir = "/CHANGE/ME/DATA_2022/REDVOX_EXAMPLES"
+# Example:
+input_dir = "/Users/mgarces/Documents/DATA_2022/REDVOX_EXAMPLES"
 
 # Name of the RedVox data window file you downloaded:
 INPUT_FILE = "dw_1648830257000498_2.pkl.lz4"
@@ -48,7 +50,7 @@ def main() -> None:
         plt.plot(audio_time_s, audio_samples)
         plt.title(f"RedVox Station ID {station.id()}")
         plt.xlabel(f"Seconds from {int(dw.start_date()*MICROS_TO_S)} Unix epoch UTC")
-        plt.ylabel("Normalized amplitude")
+        plt.ylabel("Mic amplitude (unity at full range)")
     plt.show()
 
 
