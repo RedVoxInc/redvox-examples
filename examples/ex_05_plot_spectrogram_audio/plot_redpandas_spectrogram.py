@@ -24,7 +24,7 @@ MICROS_TO_S = 1E-6
 # Change input_dir the path of your data directory
 # input_dir = "/CHANGE/ME/DATA_2022/REDVOX_EXAMPLES"
 # Example:
-input_dir = "/Users/mgarces/Documents/DATA_2022/REDVOX_EXAMPLES"
+input_dir = "/Users/mgarces/Documents/REDVOX_EXAMPLES"
 
 # Name of the RedVox datawindow file you downloaded:
 INPUT_FILE = "dw_1648830257000498_2.pkl.lz4"
@@ -59,7 +59,12 @@ def main() -> None:
                      mesh_tfr_label="tfr_bits",  # Column label for TFR bits
                      t0_sig_epoch_s=rp_df["audio_epoch_s"][0][0],  # The first timestamp
                      sig_id_label="station_id",  # Column name with IDs/names of stations, important for y ticks
-                     frequency_hz_ymin=1., frequency_hz_ymax=200., frequency_scaling='log')
+                     frequency_hz_ymin=1.,
+                     frequency_hz_ymax=200.,
+                     frequency_scaling='log',
+                     ytick_values_show=True,  # show y ticks for frequency
+                     common_colorbar=True  # add colorbar
+                     )
 
     plt.show()
 
