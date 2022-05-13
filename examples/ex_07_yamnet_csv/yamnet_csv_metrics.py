@@ -1,5 +1,7 @@
 """
 An example of metrics that can be extracted out of the YAMNet CSV downloaded from a RedVox report
+WARNING: This example may not function if you change any lines except line 13.
+WARNING: This example may not function if you do not use the file you are instructed to download.
 """
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -7,14 +9,14 @@ from datetime import datetime
 from typing import Dict
 import pprint
 
-# Input directory to CSV downloaded from report
-input_dir: str = "/CHANGE/ME/DATA_2022/REDVOX_EXAMPLES/yamnet.csv"
+# Input path to CSV downloaded from report
+input_file: str = "/CHANGE/ME/DATA_2022/REDVOX_EXAMPLES/yamnet.csv"
 
 if __name__ == "__main__":
     print(__doc__)
 
     # Load CSV
-    df = pd.read_csv(input_dir)
+    df = pd.read_csv(input_file)
     print(f'Available columns: {df.columns.values}')
 
     # Get ID of stations

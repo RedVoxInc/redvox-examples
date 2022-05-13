@@ -48,7 +48,7 @@ Examples focused on using RedPandas:
 
 Example using the [redvox.io](https://redvox.io) website to view Machine Learning products:
 
-6. [Getting YAMNet classifications from redvox.io](https://github.com/RedVoxInc/redvox-examples/tree/main/examples/ex_06_cloud_yamnet/cloud_yamnet.md)
+6. [Getting YAMNet classifications from a RedVox Report](https://github.com/RedVoxInc/redvox-examples/tree/main/examples/ex_06_cloud_yamnet/cloud_yamnet.md)
 7. [Using the YAMNet CSV from a RedVox Report](https://github.com/RedVoxInc/redvox-examples/tree/main/examples/ex_07_yamnet_csv#example-07-yamnet-csv-from-redvox-report)
 
 
