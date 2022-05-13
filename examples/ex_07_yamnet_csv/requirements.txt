@@ -1,0 +1,4 @@
+# requirements.txt file per example.
+
+pandas
+matplotlib
