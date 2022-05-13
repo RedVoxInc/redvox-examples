@@ -15,13 +15,16 @@ and the Matplotlib library to plot the graphs
 Please read about [Cloud YAMNet](https://github.com/RedVoxInc/redvox-examples/blob/main/examples/ex_06_cloud_yamnet/cloud_yamnet.md#yamnet-on-the-edge-and-in-the-cloud)
 before proceeding for instructions on how to download the YAMNet CSV file.
 
-Download `YAMNet classification timeline (.csv)` in the Additional Products section of a RedVox Report. 
+Start from RedVox Report:
+https://redvox.io/#/reports/6598
+
+Download `YAMNet classification timeline (.csv)` in the Additional Products section.  
 
 ![](img/location_csv.png)
 
 ### Running the Example
 
-In yamnet_csv_metrics.py, change input_file (line 13) to the path of the downloaded CSV file.
+In yamnet_csv_metrics.py, change input_file (line 15) to the path of the downloaded CSV file.
 
 ### Example Output
 ![](img/csv_example.png)

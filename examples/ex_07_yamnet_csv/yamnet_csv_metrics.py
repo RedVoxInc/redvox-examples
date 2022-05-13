@@ -1,6 +1,8 @@
 """
 An example of metrics that can be extracted out of the YAMNet CSV downloaded from a RedVox report
-WARNING: This example may not function if you change any lines except line 13.
+Start from RedVox Report https://redvox.io/#/reports/6598
+
+WARNING: This example may not function if you change any lines except line 15.
 WARNING: This example may not function if you do not use the file you are instructed to download.
 """
 import pandas as pd
