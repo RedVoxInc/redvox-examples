@@ -12,7 +12,7 @@ and the Matplotlib library to plot the graphs
 
 ### Obtaining the YAMNet CSV
 
-Please read about [Cloud YAMNet](https://github.com/RedVoxInc/redvox-examples/blob/main/examples/ex_06_cloud_yamnet/cloud_yamnet.md#edge--cloud-based-yamnet-classification)
+Please read about [Cloud YAMNet](https://github.com/RedVoxInc/redvox-examples/blob/main/examples/ex_06_cloud_yamnet/cloud_yamnet.md#yamnet-on-the-edge-and-in-the-cloud)
 before proceeding as it explains how to activate and run the YAMNet examples that create the CSV.
 
 
