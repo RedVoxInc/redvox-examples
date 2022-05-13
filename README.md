@@ -45,6 +45,11 @@ Examples focused on using RedPandas:
 4. [Plotting wiggles from Audio data](https://github.com/RedVoxInc/redvox-examples/tree/main/examples/ex_04_plot_wiggles_audio#example-04-plot-audio-wiggles)
 5. [Plotting spectrograms from Audio data](https://github.com/RedVoxInc/redvox-examples/tree/main/examples/ex_05_plot_spectrogram_audio#example-05-plot-audio-spectrogram)
 
+
+Example using the [redvox.io](https://redvox.io) website to view Machine Learning products
+
+6. [Getting YAMNet classifications from redvox.io](https://github.com/RedVoxInc/redvox-examples/tree/main/examples/ex_06_cloud_yamnet/cloud_yamnet.md)
+
 ### Contributors
 If you would like to contribute to this repository, please refer to the
 [guidelines](https://github.com/RedVoxInc/redvox-examples/blob/main/README_guidelines.md).
