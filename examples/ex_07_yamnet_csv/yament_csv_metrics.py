@@ -8,7 +8,7 @@ from typing import Dict
 import pprint
 
 # Input directory to CSV downloaded from report
-input_dir: str = "/Users/meritxell/Desktop/edge.csv"
+input_dir: str = "/CHANGE/ME/DATA_2022/REDVOX_EXAMPLES/yamnet.csv"
 
 if __name__ == "__main__":
     print(__doc__)

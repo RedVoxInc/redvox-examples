@@ -23,7 +23,7 @@ Download `YAMNet classification timeline (.csv)` in the Additional Products sect
 
 ### Running the Example
 
-In yamnet_csv_metrics.py, change input_dir (line 19) to the directory where the downloaded file
-`dw_1648830257000498_2.pkl.lz4` is located.
+In yamnet_csv_metrics.py, change input_dir (line 19) to the directory where the downloaded CSV file is located.
 
 ### Example Output
+![](img/csv_example.png)
