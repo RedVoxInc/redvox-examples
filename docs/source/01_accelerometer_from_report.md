@@ -1,5 +1,11 @@
 # Load the Accelerometer data 
 
+In the [previous example](00_audio_from_report.md), we loaded single-channel data (Audio). The next step is to load 
+three-channel data such as the Accelerometer with X, Y and Z dimensions following a similar process as the 
+[Audio](00_audio_from_report.md) data. 
+
+The first step is to load [RedVox data](getting_data_from_report.md) into a
+[DataWindow](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#-redvox-python-sdk-datawindow-manual).
 
 ```python
 from redvox.common.data_window import DataWindow
@@ -10,6 +16,7 @@ input_dir = "path/to/redvox/data/dw_1648830257000498_2.pkl.lz4"
 # Load data window from report
 dw = DataWindow.deserialize(input_dir)
 ```
+Next, extract the Accelerometer data for each Station stored in the DataWindow.
 
 ```python
 from redvox.common.data_window import DataWindow
@@ -20,6 +27,7 @@ input_dir = "path/to/redvox/data/dw_1648830257000498_2.pkl.lz4"
 # Load data window from report
 dw = DataWindow.deserialize(input_dir)
 
+# Loop to extract Accelerometer data from all stations
 for station in dw.stations():
     # Check that there is accelerometer data in the first place
     if station.has_accelerometer_data():
@@ -31,7 +39,7 @@ for station in dw.stations():
         accelerometer_time_micros = station.accelerometer_sensor().data_timestamps() - station.accelerometer_sensor().first_data_timestamp()
         accelerometer_time_s = accelerometer_time_micros*1E-6
 ```
-
+To visualize the Accelerometer data, we can plot it using the [Matplotlib](https://matplotlib.org/) library.
 
 ```python
 from redvox.common.data_window import DataWindow
@@ -71,6 +79,12 @@ for station in dw.stations():
 plt.show()
 ```
 
+After running the above code snippet, the following graph should appear:
 
+![](../img/fig_ex_01.png)
 
-For a more complete example on how to load the Accelerometer data, visit [Github](https://github.com/RedVoxInc/redvox-examples/blob/main/examples/ex_01_report_accelerometer/load_accelerometer.py).
+For a more complete example on how to load the other sensor data, visit 
+[Github](https://github.com/RedVoxInc/redvox-examples/blob/main/examples/ex_01_report_accelerometer/load_accelerometer.py).
+
+In the next section, we will take a look at loading [other sensors](02_other_sensors_from_report.md) such as the barometer 
+and the magnetometer.

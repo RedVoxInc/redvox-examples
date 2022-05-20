@@ -1,5 +1,7 @@
 # Load the Audio data 
 
+In this example we will introduce the main method to load RedVox Audio data.
+
 The module [DataWindow](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#-redvox-python-sdk-datawindow-manual)
 in the python RedVox SDK is designed to load both [raw API RedVox data](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#creating-datawindows) 
 and already created DataWindows, such as `dw_1648830257000498_2.pkl.lz4` [downloaded from a RedVox Report](getting_data_from_report.md).
@@ -71,11 +73,6 @@ When you run the above snippet of code, you should see this graph:
 
 Great! We can now take a look on how to load other sensors such as the [Accelerometer](01_accelerometer_from_report.md).
 
-Useful links:
-
-- For a more complete example on how to load audio, visit the [Github](https://github.com/RedVoxInc/redvox-examples/blob/main/examples/ex_00_report_audio/load_audio.py)
+For a more complete example on how to load audio, visit the [Github](https://github.com/RedVoxInc/redvox-examples/blob/main/examples/ex_00_report_audio/load_audio.py)
 sample code.
-- For more information about DataWindow, Stations and the RedVox SDK, visit the [RedVox SDK documentation](https://github.com/RedVoxInc/redvox-python-sdk).
-
-
 
