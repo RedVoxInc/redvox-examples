@@ -7,6 +7,7 @@ to obtain one-channel sensors, barometer in this example, and three-channel sens
 For more Sensors available in the DataWindow, check out the
 [Sensor Documentation](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window/station#sensor-data-access).
 
+## Running the example
 Start by loading the [Redvox data](getting_data_from_report.md) into a DataWindow.
 
 ```python
@@ -112,7 +113,7 @@ for station in dw.stations():
 
 plt.show()
 ```
-
+## Example output
 After running the above code snippet, you should see this graph for the barometer:
 
 ![](../img/fig_ex_02_bar.png)

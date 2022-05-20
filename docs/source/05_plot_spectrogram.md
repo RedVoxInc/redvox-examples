@@ -3,6 +3,8 @@
 In this example we will plot the Audio spectrogram using [RedPandas](https://github.com/RedVoxInc/redpandas). 
 The steps are very similar to the previous example where we plotted the [Audio waveforms](04_plot_wiggles.md).
 
+## Running the example
+
 The first step is to load the
 [DataWindow](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#-redvox-python-sdk-datawindow-manual).
 
@@ -118,6 +120,8 @@ plot_mesh_pandas(df=rp_df,
 
 plt.show()
 ```
+
+## Example output
 Running the above code snippet should yield the following figure:
 
 ![](../img/fig_ex_05.png)

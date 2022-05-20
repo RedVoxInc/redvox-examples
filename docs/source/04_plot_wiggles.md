@@ -2,6 +2,8 @@
 
 In this example we will examine how to plot Audio waveforms using [RedPandas](https://github.com/RedVoxInc/redpandas).
 
+## Running the example
+
 The first step is to load the
 [DataWindow](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#-redvox-python-sdk-datawindow-manual).
 
@@ -70,6 +72,8 @@ plot_wiggles_pandas(df=rp_df,  # the name of the redpandas dataframe, in this ca
 
 plt.show()
 ```
+
+## Example output
 
 When you run the above snippet of code, you should see this graph with the waveforms:
 

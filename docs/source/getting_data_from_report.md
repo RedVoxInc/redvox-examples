@@ -31,6 +31,9 @@ In _Additional Products_, click the `Time aligned and corrected data window` lin
 
 A file named `dw_1648830257000498_2.pkl.lz4` will start to download.
 
+> **_NOTE:_** All the examples in the following section (FROM A REDVOX REPORT, HOW TO...)
+> use this dataset downloaded. 
+
 We are done setting up! Now we can start [loading the Audio data](00_audio_from_report.md) in the next section.
 
 

@@ -4,6 +4,8 @@ In the [previous example](00_audio_from_report.md), we loaded single-channel dat
 three-channel data such as the Accelerometer with X, Y and Z dimensions following a similar process as the 
 [Audio](00_audio_from_report.md) data. 
 
+
+## Running the example
 The first step is to load [RedVox data](getting_data_from_report.md) into a
 [DataWindow](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#-redvox-python-sdk-datawindow-manual).
 
@@ -78,6 +80,7 @@ for station in dw.stations():
 
 plt.show()
 ```
+## Example output
 
 After running the above code snippet, the following graph should appear:
 

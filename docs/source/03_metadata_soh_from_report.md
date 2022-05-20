@@ -1,5 +1,9 @@
 # Load Metadata and State of Health data 
 
+Metadata and State of Health are key pieces of information to understand how a Station is faring. In this example 
+we examine how to obtain the Health sensor from the DataWindow.
+
+## Running the example
 The first step is to load [RedVox data](getting_data_from_report.md) into a
 [DataWindow](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#-redvox-python-sdk-datawindow-manual).
 
@@ -35,7 +39,7 @@ for station in dw.stations():
               f"redvox app version:  {station.metadata().app_version}\n"
               f"redvox packet duration in seconds: {station.metadata().packet_duration_s}\n")
 ```
-This is just a subset of available metadata. For a complete list, visit the 
+This is just a subset of the available metadata. For a complete list, visit the 
 [Station Metadata Documentation](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window/station#station-metadata).
 
 Let's take a look at the State of Health sensor. In this example, we will extract the power state, battery charge % and
@@ -130,7 +134,7 @@ for station in dw.stations():
 
 plt.show()
 ```
-
+## Example output
 After running the above code snippet, the following graph should appear:
 
 ![](../img/fig_ex_03.png)
