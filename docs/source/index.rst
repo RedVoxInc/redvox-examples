@@ -13,6 +13,12 @@ This is a space for examples of the `RedVox SDK <https://github.com/RedVoxInc/re
 `RedPandas <https://github.com/RedVoxInc/redpandas>`_, and `redvox.io <https://redvox.io/#/home>`_, that aim to serve as
 tutorials.
 
+**Setup**
+
+- :doc:`prereqs`
+- :doc:`getting_data_from_report`
+
+
 **Related to RedVox SDK**
 
 - :doc:`00_audio_from_report`
@@ -66,7 +72,6 @@ The following terms are common terminology used throughout this Documentation.
 .. toctree::
    :maxdepth: 2
    :caption: Before Starting...
-   :caption: From a RedVox Report, How To...
    :hidden:
 
    prereqs
@@ -74,6 +79,7 @@ The following terms are common terminology used throughout this Documentation.
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :caption: From a RedVox Report, How To...
 
    00_audio_from_report
@@ -85,6 +91,7 @@ The following terms are common terminology used throughout this Documentation.
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :caption: For redvox.io, How To...
 
    06_get_yamnet_classifications
@@ -92,6 +99,7 @@ The following terms are common terminology used throughout this Documentation.
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :caption: For more information:
 
    what_to_do_next
