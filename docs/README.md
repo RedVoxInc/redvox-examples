@@ -23,7 +23,7 @@ If you add new `.md` files, make sure that `index.rst` inside the `source` folde
 Please do not modify the following files (unless you really know what you are doing):
 - `.nojekyll` - used for hosting the docs in Github Pages
 - `make.bat` and `Makefile` - used by sphinx to clean and build the documentation
-- `index.html` inside the `docs` folder (okay to modify the `index.html` inside the `source` folder) - used for hosting 
+- `index.html` inside the `docs` folder (okay to modify the `index.rst` inside the `source` folder) - used for hosting 
 the docs in Github pages
 
 ### Viewing the docs locally
@@ -32,7 +32,7 @@ Once you are done with your changes, open a terminal with a python environment, 
 `make clean` will eliminate everything in the `build` folder and `make html` will (re)build the documentation.
 
 ```shell
-(venv3910) meritxell@ISLA-11 docs % 
+(venv3910) meritxell@ISLA-11 redvox-examples % cd docs
 (venv3910) meritxell@ISLA-11 docs % make clean 
 (venv3910) meritxell@ISLA-11 docs % make html 
 ```
