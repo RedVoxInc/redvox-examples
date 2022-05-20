@@ -65,10 +65,17 @@ The following terms are common terminology used throughout this Documentation.
 
 .. toctree::
    :maxdepth: 2
+   :caption: Before Starting...
    :caption: From a RedVox Report, How To...
    :hidden:
 
+   prereqs
    getting_data_from_report
+
+.. toctree::
+   :maxdepth: 2
+   :caption: From a RedVox Report, How To...
+
    00_audio_from_report
    01_accelerometer_from_report
    02_other_sensors_from_report
@@ -79,7 +86,6 @@ The following terms are common terminology used throughout this Documentation.
 .. toctree::
    :maxdepth: 2
    :caption: For redvox.io, How To...
-   :hidden:
 
    06_get_yamnet_classifications
    07_use_yamnet_csv
@@ -87,7 +93,6 @@ The following terms are common terminology used throughout this Documentation.
 .. toctree::
    :maxdepth: 2
    :caption: For more information:
-   :hidden:
 
    what_to_do_next
 
