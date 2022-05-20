@@ -1,14 +1,15 @@
-# Get started
+# Getting started
 
-The first two steps are to set up the python requirements and obtain the test data.
+The first steps are to set up the Python requirements and obtain the test data.
 
-### Setup
+## Setup
 
-You will need the [RedVox SDK](https://github.com/RedVoxInc/redvox-python-sdk#redvox-python-sdk) to run this example. The SDK can be installed by running:
+You will need the [RedVox SDK](https://github.com/RedVoxInc/redvox-python-sdk#redvox-python-sdk) to run this example. 
+The SDK can be installed by running:
 ```shell
-pip install redvox==3.1.13
+pip install redvox==3.2.0
 ```
-in a terminal with python enabled. For more instructions on installing the SDK, please visit
+in a terminal with Python enabled. For more instructions on installing the SDK, please visit
 [RedVox SDK Installation](https://github.com/RedVoxInc/redvox-python-sdk/blob/master/docs/python_sdk/installation.md#-redvox-sdk-installation).
 
 You will also need the [RedPandas](https://github.com/RedVoxInc/redpandas#redpandas) library which can be installed with:
@@ -19,7 +20,7 @@ For more instructions on installing RedPandas, please visit
 [RedPandas Installation](https://github.com/RedVoxInc/redpandas/blob/master/docs/redpandas/installation.md#redpandas-installation).
 
 
-### Obtaining Data
+## Obtaining Data
 
 The data is located in a RedVox Report:
 [https://redvox.io/#/reports/E328](https://redvox.io/#/reports/E328)

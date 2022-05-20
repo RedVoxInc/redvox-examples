@@ -6,6 +6,10 @@ This is a space for examples of the [RedVox SDK](https://github.com/RedVoxInc/re
 [RedPandas](https://github.com/RedVoxInc/redpandas), and [redvox.io](https://redvox.io/#/home), that aim to serve as
 tutorials.
 
+## Setup
+- [Prerequisites](prereqs.md)
+- [Getting data from a Report](getting_data_from_report.md)
+
 ## Related to RedVox SDK
 
 - [Load the Audio data](00_audio_from_report.md)
