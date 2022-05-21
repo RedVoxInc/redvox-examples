@@ -65,7 +65,6 @@ source_suffix = {
 html_theme = 'furo'
 html_title = "RedVox Examples"
 html_logo = "../img/redvox_logo.png"
-html_css_files = ["custom.css"]
 
 html_theme_options: Dict[str, Any] = {
     "footer_icons": [
@@ -82,14 +81,11 @@ html_theme_options: Dict[str, Any] = {
     ],
 
     "light_css_variables": {
-        # "color-sidebar-background": "black",
+        # "color-sidebar-background": "#1B2631",
         # "color-sidebar-background-border": "white",
     },
 }
 
-
-def setup(app):
-    app.add_css_file('custom.css')
 
 
 
