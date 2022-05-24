@@ -1,12 +1,14 @@
 # Load the Audio data 
 
-In this example we will introduce the main method to load RedVox Audio data.
+In this example we will load and plot RedVox Audio data using DataWindow.
+
+**What is DataWindow?**
 
 The module [DataWindow](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#-redvox-python-sdk-datawindow-manual)
-in the python RedVox SDK is designed to load both [raw API RedVox data](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#creating-datawindows) 
+in the [python RedVox SDK](https://github.com/RedVoxInc/redvox-python-sdk) is designed to load both [raw API RedVox data](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#creating-datawindows) 
 and already created DataWindows, such as `dw_1648830257000498_2.pkl.lz4` [downloaded from a RedVox Report](getting_data_from_report.md).
 
-> **_NOTE:_**  This example (and the following ones) use the downloaded DataWindow from a RedVox report. 
+> **_NOTE:_**  This example (and the following ones) use the already created DataWindow downloaded from a RedVox report. 
 > If your starting point is raw RedVox data, visit 
 > [creating a DataWindow](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#creating-datawindows).
 
@@ -24,7 +26,7 @@ input_dir = "path/to/redvox/data/dw_1648830257000498_2.pkl.lz4"
 dw = DataWindow.deserialize(input_dir)
 ```
 The DataWindow contains [Stations](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window/station#-redvox-python-sdk-station-and-sensordata-manual)
-(for example, a Station can be phone) which in turn contain the [Audio data](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window/station#sensor-data)
+(for example, a Station can be a phone) which in turn contain the [Audio data](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window/station#sensor-data)
 for that Station.
 
 Let's extract the Audio data for all the stations in the DataWindow we loaded.

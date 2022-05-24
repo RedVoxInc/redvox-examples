@@ -1,12 +1,11 @@
 # Load the Accelerometer data 
 
 In the [previous example](00_audio_from_report.md), we loaded single-channel data (Audio). The next step is to load 
-three-channel data such as the Accelerometer with X, Y and Z dimensions following a similar process as the 
+three-channel data such as the Accelerometer (X, Y and Z dimensions) following a similar process as the 
 [Audio](00_audio_from_report.md) data. 
 
-
 ## Running the example
-The first step is to load [RedVox data](getting_data_from_report.md) into a
+The first step is to load [RedVox data](getting_data_from_report.md) in a
 [DataWindow](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#-redvox-python-sdk-datawindow-manual).
 
 ```python
@@ -41,7 +40,7 @@ for station in dw.stations():
         accelerometer_time_micros = station.accelerometer_sensor().data_timestamps() - station.accelerometer_sensor().first_data_timestamp()
         accelerometer_time_s = accelerometer_time_micros*1E-6
 ```
-To visualize the Accelerometer data, we can plot it using the [Matplotlib](https://matplotlib.org/) library.
+We can plot the Accelerometer data using the [Matplotlib](https://matplotlib.org/) library to visualize it.
 
 ```python
 from redvox.common.data_window import DataWindow

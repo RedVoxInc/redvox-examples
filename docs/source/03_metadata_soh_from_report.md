@@ -42,7 +42,7 @@ for station in dw.stations():
 This is just a subset of the available metadata. For a complete list, visit the 
 [Station Metadata Documentation](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window/station#station-metadata).
 
-Let's take a look at the State of Health sensor. In this example, we will extract the power state, battery charge % and
+Let's take a look at State of Health sensor. In this example, we will extract the power state, battery charge % and
 internal temperature. The complete list of available State of Health can be found in the 
 [Health Sensor Documentation](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window/station#health-sensor)
 .
@@ -142,7 +142,7 @@ After running the above code snippet, the following graph should appear:
 For a more complete example on how to load the other sensor data, visit
 [Github](https://github.com/RedVoxInc/redvox-examples/blob/main/examples/ex_03_metadata_and_soh/load_metadata_soh.py).
 
-In the next section, we will take a look at [plotting wiggles](04_plot_wiggles.md).
+In the next section, we will take a look at [plotting Audio waveforms](04_plot_wiggles.md).
 
 
 

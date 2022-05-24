@@ -3,6 +3,9 @@
 At the end of the [previous example](06_get_yamnet_classifications.md), we downloaded a CSV file with basic information about the 
 YAMNet classifications.  In this example, we will demonstrate how to use this file to display part of the data.
 
+> **_NOTE:_**  To reproduce the results in this example, download the _YAMNet classification timeline (.csv)_ in 
+> the _Additional Products_ section in https://redvox.io/#/reports/6598
+
 ## Running the Example
 
 First, we will read the CSV file and display the columns' titles.

@@ -1,38 +1,37 @@
 # Getting started
 
-The first steps are to set up the Python requirements and obtain the test data.
-
-## Setup
+## Python setup
 
 You will need the [RedVox SDK](https://github.com/RedVoxInc/redvox-python-sdk#redvox-python-sdk) to run this example. 
 The SDK can be installed by running:
 ```shell
 pip install redvox==3.2.0
 ```
-in a terminal with Python enabled. For more instructions on installing the SDK, please visit
-[RedVox SDK Installation](https://github.com/RedVoxInc/redvox-python-sdk/blob/master/docs/python_sdk/installation.md#-redvox-sdk-installation).
+in a terminal with Python enabled. 
 
 You will also need the [RedPandas](https://github.com/RedVoxInc/redpandas#redpandas) library which can be installed with:
 ```shell
 pip install redpandas==1.3.5
 ```
-For more instructions on installing RedPandas, please visit
+For more instructions on installing these libraries, please visit
+[RedVox SDK Installation](https://github.com/RedVoxInc/redvox-python-sdk/blob/master/docs/python_sdk/installation.md#-redvox-sdk-installation)
+and
 [RedPandas Installation](https://github.com/RedVoxInc/redpandas/blob/master/docs/redpandas/installation.md#redpandas-installation).
 
 
 ## Obtaining Data
 
-The data is located in a RedVox Report:
+We will be using a dataset recorded during a SpaceX launch to showcase the examples. The data is located in the RedVox Report:
 [https://redvox.io/#/reports/E328](https://redvox.io/#/reports/E328)
 
 In _Additional Products_, click the `Time aligned and corrected data window` link.
 
-![](../img/additional_products_img.png)
+![](../img/additional_product_img.jpg)
 
 A file named `dw_1648830257000498_2.pkl.lz4` will start to download.
 
 > **_NOTE:_** All the examples in the following section (FROM A REDVOX REPORT, HOW TO...)
-> use this dataset downloaded. 
+> use this dataset. 
 
 We are done setting up! Now we can start [loading the Audio data](00_audio_from_report.md) in the next section.
 

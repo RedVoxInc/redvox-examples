@@ -3,7 +3,7 @@
 The [DataWindow](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#-redvox-python-sdk-datawindow-manual) 
 contains one-channel sensors, such as [Audio](00_audio_from_report.md), and three-channel sensors, 
 such as [Accelerometer](01_accelerometer_from_report.md). In this example we will take a look at the general procedure
-to obtain one-channel sensors, barometer in this example, and three-channel sensors, magnetometer in this example. 
+to obtain one-channel sensors, barometer in this case, and three-channel sensors, magnetometer in this example. 
 For more Sensors available in the DataWindow, check out the
 [Sensor Documentation](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window/station#sensor-data-access).
 
@@ -129,7 +129,7 @@ For a more complete example on how to load the Accelerometer data, visit
 For more information on Sensors, visit the 
 [Sensor Data Documentation](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window/station#sensor-data)
 and the [Sensor Subclasses](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window/station#sensor-subclass-functions)
-to see what X,Y,Z data and other possible functions available per sensor.
+to see what X,Y,Z data and other possible functions are available per sensor.
 
 The next example focuses on obtaining [Metadata and State of Health data](03_metadata_soh_from_report.md).
 

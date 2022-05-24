@@ -13,6 +13,11 @@ This is a space for examples of the `RedVox SDK <https://github.com/RedVoxInc/re
 `RedPandas <https://github.com/RedVoxInc/redpandas>`_, and `redvox.io <https://redvox.io/#/home>`_, that aim to serve as
 tutorials.
 
+.. note:: To run RedVox SDK and RedPandas examples you will need to **Setup**
+
+Contents
+----------
+
 **Setup**
 
 - :doc:`prereqs`
@@ -39,7 +44,7 @@ tutorials.
 Basic definitions
 ------------------
 
-The following terms are common terminology used throughout this Documentation.
+The following terms are common terminology used throughout this documentation.
 
 
 - **RedVox**: Not the NYC based rock band. RedVox refers to products developed by `RedVox, Inc. <http://nelha.hawaii.gov/our-clients/redvox/>`_.

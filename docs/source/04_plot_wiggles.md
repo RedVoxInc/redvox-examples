@@ -4,7 +4,7 @@ In this example we will examine how to plot Audio waveforms using [RedPandas](ht
 
 ## Running the example
 
-The first step is to load the
+The first step is to load [RedVox data](getting_data_from_report.md) into a
 [DataWindow](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#-redvox-python-sdk-datawindow-manual).
 
 ```python
@@ -16,7 +16,8 @@ input_dir = "path/to/redvox/data/dw_1648830257000498_2.pkl.lz4"
 # Load data window from report
 dw = DataWindow.deserialize(input_dir)
 ```
-The next step is to make a pandas dataframe using RedPandas [redpd_dataframe](https://github.com/RedVoxInc/redpandas/blob/master/docs/redpandas/using_redpandas.md#opening-redvox-data-with-redpandas).
+The next step is to make a pandas dataframe using [redpd_dataframe](https://github.com/RedVoxInc/redpandas/blob/master/docs/redpandas/using_redpandas.md#opening-redvox-data-with-redpandas)
+in the RedPandas library.
 
 ```python
 from redvox.common.data_window import DataWindow

@@ -8,6 +8,4 @@ In order to run the examples:
 3. You must have access to the internet via a web browser.
 4. You must be able to edit Python files via an IDE (Integrated Development Environment), text editor or another method.
 
-> **_NOTE:_**  Please contact your organization's support team if you need help with any of these prerequisites.
-
-Once you have set up your prerequisites, you can [setup your environment to run the examples](getting_data_from_report.md).
+Once the prerequisites are in place, you can [setup your environment to run the examples](getting_data_from_report.md).
