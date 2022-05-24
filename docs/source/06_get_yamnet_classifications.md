@@ -1,4 +1,4 @@
-# Get YAMNet classifications
+# Get YAMNet Classifications
 
 The [RedVox webpage](https://redvox.io) provides facilities for both extracting edge computed ML with TensorFlow Lite and performing cloud computed ML with full TensorFlow.
 
@@ -7,7 +7,7 @@ The [RedVox webpage](https://redvox.io) provides facilities for both extracting 
 In order to use these features, you must be using a RedVox account that has the `RedVox` tier and the `YamNet` feature enabled. 
 Accounts that meet these requirements include `redvoxcore` and `redvoxtesting4`.
 
-Contact Anthony to include these features in another account.
+Contact [Redvox Support](mailto:support@redvox.io) to include these features in another account.
 
 ## Enabling Edge YAMNet
 
@@ -112,4 +112,4 @@ Download the CSV file to your computer.
 
 ![](../img/location_csv.png)
 
-Next, [we will look at an example that uses the CSV file to display some basic information about the YAMNet data](07_use_yamnet_csv.md).
+Next, we will look at [an example that uses the CSV file to display some basic information about the YAMNet data](07_use_yamnet_csv.md).

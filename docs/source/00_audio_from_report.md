@@ -1,12 +1,12 @@
-# Load the Audio data 
+# Load the Audio Data 
 
 In this example we will load and plot RedVox Audio data using DataWindow.
 
 **What is DataWindow?**
 
 The module [DataWindow](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#-redvox-python-sdk-datawindow-manual)
-in the [python RedVox SDK](https://github.com/RedVoxInc/redvox-python-sdk) is designed to load both [raw API RedVox data](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#creating-datawindows) 
-and already created DataWindows, such as `dw_1648830257000498_2.pkl.lz4` [downloaded from a RedVox Report](getting_data_from_report.md).
+in the [RedVox Python SDK](https://github.com/RedVoxInc/redvox-python-sdk) is designed to load both [raw API RedVox data](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#creating-datawindows) 
+and already created DataWindows (such as `dw_1648830257000498_2.pkl.lz4`) [downloaded from a RedVox Report](getting_data_from_report.md).
 
 > **_NOTE:_**  This example (and the following ones) use the already created DataWindow downloaded from a RedVox report. 
 > If your starting point is raw RedVox data, visit 
@@ -26,10 +26,10 @@ input_dir = "path/to/redvox/data/dw_1648830257000498_2.pkl.lz4"
 dw = DataWindow.deserialize(input_dir)
 ```
 The DataWindow contains [Stations](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window/station#-redvox-python-sdk-station-and-sensordata-manual)
-(for example, a Station can be a phone) which in turn contain the [Audio data](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window/station#sensor-data)
+(devices that can record data, for example, a phone) which in turn contains the [audio data](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window/station#sensor-data)
 for that Station.
 
-Let's extract the Audio data for all the stations in the DataWindow we loaded.
+Let's extract the audio data for all the Stations in the DataWindow we loaded.
 
 ```python
 from redvox.common.data_window import DataWindow
@@ -47,7 +47,7 @@ for station in dw.stations():
     audio_time_micros = station.audio_sensor().data_timestamps() - station.audio_sensor().first_data_timestamp()
     audio_time_s = audio_time_micros*1E-6  # from microseconds to seconds
 ```
-Let's plot the Audio data by using the [Matplotlib](https://matplotlib.org/) library.
+Let's plot the audio data by using the [Matplotlib](https://matplotlib.org/) library.
 
 ```python
 from redvox.common.data_window import DataWindow
@@ -80,8 +80,8 @@ When you run the above snippet of code, you should see this graph:
 
 ![](../img/fig_ex_00.png)
 
-Great! We can now take a look on how to load other sensors such as the [Accelerometer](01_accelerometer_from_report.md).
+For a more complete example on how to load audio data, visit the
+[Github](https://github.com/RedVoxInc/redvox-examples/blob/main/examples/ex_00_report_audio/load_audio.py) sample code.
 
-For a more complete example on how to load audio, visit the [Github](https://github.com/RedVoxInc/redvox-examples/blob/main/examples/ex_00_report_audio/load_audio.py)
-sample code.
+Great! We can now take a look on how to load other sensors such as the [accelerometer](01_accelerometer_from_report.md).
 

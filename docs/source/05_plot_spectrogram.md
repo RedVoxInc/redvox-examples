@@ -1,7 +1,7 @@
-# Plot Audio spectrogram
+# Plot Audio Spectrogram
 
-In this example we will plot the Audio spectrogram using [RedPandas](https://github.com/RedVoxInc/redpandas). 
-The steps are very similar to the previous example where we plotted the [Audio waveforms](04_plot_wiggles.md).
+In this example we will plot the audio spectrogram using [RedPandas](https://github.com/RedVoxInc/redpandas). 
+The steps are very similar to the previous example where we plotted the [audio waveforms](04_plot_wiggles.md).
 
 ## Running the example
 The first step is to load [RedVox data](getting_data_from_report.md) into a
