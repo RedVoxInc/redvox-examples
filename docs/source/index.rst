@@ -9,11 +9,10 @@ RedVox Examples
 
 Welcome to RedVox Examples!
 
-This is a space for examples of the `RedVox SDK <https://github.com/RedVoxInc/redvox-python-sdk>`_,
-`RedPandas <https://github.com/RedVoxInc/redpandas>`_, and `redvox.io <https://redvox.io/#/home>`_, that aim to serve as
-tutorials.
+This is a space for examples and tutorials of the `RedVox SDK <https://github.com/RedVoxInc/redvox-python-sdk>`_,
+`RedPandas library <https://github.com/RedVoxInc/redpandas>`_, and `redvox.io website <https://redvox.io/#/home>`_.
 
-.. note:: To run RedVox SDK and RedPandas examples you will need to **Setup**
+.. note:: To run RedVox SDK and RedPandas examples please start by reading about the :doc:`prereqs`
 
 Contents
 ----------

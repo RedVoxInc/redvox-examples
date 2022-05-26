@@ -1,6 +1,6 @@
-# Plot Audio waveforms
+# Plot Audio Waveforms
 
-In this example we will examine how to plot Audio waveforms using [RedPandas](https://github.com/RedVoxInc/redpandas).
+In this example we will examine how to plot audio waveforms using [RedPandas](https://github.com/RedVoxInc/redpandas).
 
 ## Running the example
 
@@ -83,4 +83,4 @@ When you run the above snippet of code, you should see this graph with the wavef
 You can also view this example in
 [Github](https://github.com/RedVoxInc/redvox-examples/blob/main/examples/ex_04_plot_wiggles_audio/plot_redpandas_wiggles.py).
 
-The next example, we will examine on how to plot [Audio spectrograms](05_plot_spectrogram.md).
+The next example, we will examine on how to plot [audio spectrograms](05_plot_spectrogram.md).
