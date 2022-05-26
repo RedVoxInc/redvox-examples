@@ -1,6 +1,7 @@
 # Prerequisites
 
-In order to run the examples:
+In order to run the [RedVox SDK](https://github.com/RedVoxInc/redvox-python-sdk) and 
+[RedPandas](https://github.com/RedVoxInc/redpandas) examples:
 
 1. You must be able to run Python scripts on your machine.  The SDK and RedPandas are designed to run on Python version 
    3.8 or higher.  We recommend using a virtual Python environment if possible.

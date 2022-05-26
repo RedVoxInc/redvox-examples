@@ -66,6 +66,8 @@ html_theme = 'furo'
 html_title = "RedVox Examples"
 html_logo = "../img/redvox_logo.png"
 
+html_favicon = '../img/favicon.ico'
+
 html_theme_options: Dict[str, Any] = {
     "footer_icons": [
         {
