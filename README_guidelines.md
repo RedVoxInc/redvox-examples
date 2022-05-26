@@ -1,4 +1,4 @@
-# redvox-examples
+# RedVox Examples Contribution Guidelines
 
 A repository for case-studies, examples, and tutorials
 
