@@ -5,14 +5,12 @@
 
 
 RedVox Examples
-===========================================
+=================
 
 Welcome to RedVox Examples!
 
 This is a space for examples and tutorials of the `RedVox SDK <https://github.com/RedVoxInc/redvox-python-sdk>`_,
 `RedPandas library <https://github.com/RedVoxInc/redpandas>`_, and `redvox.io website <https://redvox.io/#/home>`_.
-
-.. note:: To run RedVox SDK and RedPandas examples please start by reading about the :doc:`prereqs`
 
 Contents
 ----------
@@ -47,6 +45,11 @@ The following terms are common terminology used throughout this documentation.
 
 
 - **RedVox**: Not the NYC based rock band. RedVox refers to products developed by `RedVox, Inc. <http://nelha.hawaii.gov/our-clients/redvox/>`_.
+
+- **redvox.io**: the RedVox webpage where RedVox reports are done. Visit `redvox.io <https://redvox.io/#/home>`_.
+
+- **RedVox Report**: `redvox.io <https://redvox.io/#/home>`_ can perform the sensor analysis
+  (plot audio waveforms, spectrograms, state of health data) for you and provide a summary - a report.
 
 - **RedVox Infrasound Recorder**: A smartphone app that can record audio and other stimuli such as pressure.
   Visit `RedVox Sound <https://www.redvoxsound.com>`_ to learn more about the app.

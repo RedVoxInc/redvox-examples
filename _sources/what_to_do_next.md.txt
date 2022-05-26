@@ -16,4 +16,4 @@ Finished with the examples? Great! Here are some suggestions on what to do next:
   Skyfall: Signal Fusion from a Smartphone Falling from the Stratosphere, Signals Special Issue: Internet of Things for Smart Planet: Present and Future, 2022, 3(2), 209-234. 
   [Available online](https://doi.org/10.3390/signals3020014)
 
-    - Github repository showcasing [Skyfall example](https://github.com/RedVoxInc/Skyfall) and corresponding [Skyfall documentation](https://redvoxinc.github.io/Skyfall/html/index.html).
+    - Github repository showcasing [Skyfall example](https://github.com/RedVoxInc/Skyfall) and corresponding [Skyfall documentation](https://redvoxinc.github.io/Skyfall/).
