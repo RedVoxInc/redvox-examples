@@ -1,7 +1,9 @@
 # How to contribute to the RedVox Examples Docs
 
 ### Python libraries required
-- m2r2, to reference docs outside the `source` folder
+
+Check out `requirements_docs.txt` but mainly:
+
 - sphinx
 - furo, the sphinx theme used
 - myst-parser, to parse markdown (.md) files to sphinx
