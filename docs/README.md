@@ -2,11 +2,13 @@
 
 ### Python libraries required
 
-Check out `requirements_docs.txt` but mainly:
-
 - sphinx
 - furo, the sphinx theme used
 - myst-parser, to parse markdown (.md) files to sphinx
+
+Note: `requirements_docs.txt` in the `docs` folder is the requirements used by the Github action in 
+.github/workflows/docs_gh_pages.yml to construct the docs and push to the branch `gh-pages`. 
+Please do not change/move.
 
 ### Editing the docs
 
@@ -15,11 +17,12 @@ The meat of the documentation is in redvox-examples/docs/source. The `.md` files
 If you add new `.md` files, make sure that `index.rst` inside the `source` folder points to the new file using
 `.. toctree::`.
 
-Please do not modify the following files (unless you really know what you are doing):
+Please do not modify the following files in the `docs` folder (unless you really know what you are doing):
 - `.nojekyll` - used for hosting the docs in Github Pages
 - `make.bat` and `Makefile` - used by sphinx to clean and build the documentation
 - `index.html` inside the `docs` folder (okay to modify the `index.rst` inside the `source` folder) - used for hosting 
 the docs in Github pages
+- `requirements_docs.txt` - used by Github actions
 
 ### Viewing the docs locally
 
