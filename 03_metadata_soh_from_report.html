@@ -1,0 +1,415 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Plot Audio Waveforms" href="04_plot_wiggles.html" /><link rel="prev" title="Load Other Sensor Data" href="02_other_sensors_from_report.html" />
+
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
+        <title>Load Metadata and State of Health Data - RedVox Examples</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">RedVox Examples</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/redvox_logo.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">RedVox Examples</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Before Starting...</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="prereqs.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_data_from_report.html">Getting Started</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">From a RedVox Report, How To...</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="00_audio_from_report.html">Load the Audio Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_accelerometer_from_report.html">Load the Accelerometer Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_other_sensors_from_report.html">Load Other Sensor Data</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Load Metadata and State of Health Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_plot_wiggles.html">Plot Audio Waveforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_plot_spectrogram.html">Plot Audio Spectrogram</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For redvox.io, How To...</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="06_get_yamnet_classifications.html">Get YAMNet Classifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_use_yamnet_csv.html">Use the YAMNet CSV</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For more information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="what_to_do_next.html">What to do next?</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <div class="section" id="load-metadata-and-state-of-health-data">
+<h1>Load Metadata and State of Health Data<a class="headerlink" href="#load-metadata-and-state-of-health-data" title="Permalink to this headline">#</a></h1>
+<p>Metadata and state of health are key pieces of information to understand how a station is faring. In this example
+we examine how to obtain the metadata and health sensor data from the DataWindow.</p>
+<div class="section" id="running-the-example">
+<h2>Running the example<a class="headerlink" href="#running-the-example" title="Permalink to this headline">#</a></h2>
+<p>The first step is to load <a class="reference internal" href="getting_data_from_report.html"><span class="doc std std-doc">RedVox data</span></a> into a
+<a class="reference external" href="https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#-redvox-python-sdk-datawindow-manual">DataWindow</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">redvox.common.data_window</span> <span class="kn">import</span> <span class="n">DataWindow</span>
+
+<span class="c1"># Input Directory</span>
+<span class="n">input_dir</span> <span class="o">=</span> <span class="s2">"path/to/redvox/data/dw_1648830257000498_2.pkl.lz4"</span>
+
+<span class="c1"># Load data window from report</span>
+<span class="n">dw</span> <span class="o">=</span> <span class="n">DataWindow</span><span class="o">.</span><span class="n">deserialize</span><span class="p">(</span><span class="n">input_dir</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Let’s take a look at the metadata for each Station.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">redvox.common.data_window</span> <span class="kn">import</span> <span class="n">DataWindow</span>
+
+<span class="c1"># Input Directory</span>
+<span class="n">input_dir</span> <span class="o">=</span> <span class="s2">"path/to/redvox/data/dw_1648830257000498_2.pkl.lz4"</span>
+
+<span class="c1"># Load data window from report</span>
+<span class="n">dw</span> <span class="o">=</span> <span class="n">DataWindow</span><span class="o">.</span><span class="n">deserialize</span><span class="p">(</span><span class="n">input_dir</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">station</span> <span class="ow">in</span> <span class="n">dw</span><span class="o">.</span><span class="n">stations</span><span class="p">():</span>
+        <span class="c1"># Print some metadata</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Station </span><span class="si">{</span><span class="n">station</span><span class="o">.</span><span class="n">id</span><span class="p">()</span><span class="si">}</span><span class="s2"> Metadata:</span><span class="se">\n</span><span class="s2">"</span>
+              <span class="sa">f</span><span class="s2">"station description: </span><span class="si">{</span><span class="n">station</span><span class="o">.</span><span class="n">metadata</span><span class="p">()</span><span class="o">.</span><span class="n">station_description</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span>
+              <span class="sa">f</span><span class="s2">"is station private: </span><span class="si">{</span><span class="n">station</span><span class="o">.</span><span class="n">metadata</span><span class="p">()</span><span class="o">.</span><span class="n">is_private</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span>
+              <span class="sa">f</span><span class="s2">"station make: </span><span class="si">{</span><span class="n">station</span><span class="o">.</span><span class="n">metadata</span><span class="p">()</span><span class="o">.</span><span class="n">make</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span>
+              <span class="sa">f</span><span class="s2">"station model: </span><span class="si">{</span><span class="n">station</span><span class="o">.</span><span class="n">metadata</span><span class="p">()</span><span class="o">.</span><span class="n">model</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span>
+              <span class="sa">f</span><span class="s2">"station os: </span><span class="si">{</span><span class="n">station</span><span class="o">.</span><span class="n">metadata</span><span class="p">()</span><span class="o">.</span><span class="n">os</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span>
+              <span class="sa">f</span><span class="s2">"station os version: </span><span class="si">{</span><span class="n">station</span><span class="o">.</span><span class="n">metadata</span><span class="p">()</span><span class="o">.</span><span class="n">os_version</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span>
+              <span class="sa">f</span><span class="s2">"redvox app version:  </span><span class="si">{</span><span class="n">station</span><span class="o">.</span><span class="n">metadata</span><span class="p">()</span><span class="o">.</span><span class="n">app_version</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span>
+              <span class="sa">f</span><span class="s2">"redvox packet duration in seconds: </span><span class="si">{</span><span class="n">station</span><span class="o">.</span><span class="n">metadata</span><span class="p">()</span><span class="o">.</span><span class="n">packet_duration_s</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This is just a subset of the available metadata. For a complete list, visit the
+<a class="reference external" href="https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window/station#station-metadata">Station Metadata Documentation</a>.</p>
+<p>Let’s take a look at state of health sensor. In this example, we will extract the power state, battery charge % and
+internal temperature. The complete list of available state of health can be found in the
+<a class="reference external" href="https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window/station#health-sensor">Health Sensor Documentation</a>
+.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">redvox.common.data_window</span> <span class="kn">import</span> <span class="n">DataWindow</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Input Directory</span>
+<span class="n">input_dir</span> <span class="o">=</span> <span class="s2">"path/to/redvox/data/dw_1648830257000498_2.pkl.lz4"</span>
+
+<span class="c1"># Load data window from report</span>
+<span class="n">dw</span> <span class="o">=</span> <span class="n">DataWindow</span><span class="o">.</span><span class="n">deserialize</span><span class="p">(</span><span class="n">input_dir</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">station</span> <span class="ow">in</span> <span class="n">dw</span><span class="o">.</span><span class="n">stations</span><span class="p">():</span>
+        <span class="c1"># Check that there is state of health data</span>
+        <span class="k">if</span> <span class="n">station</span><span class="o">.</span><span class="n">has_health_sensor</span><span class="p">():</span>
+
+            <span class="c1"># Get some state of health data - example of what is available</span>
+            <span class="n">power_state</span> <span class="o">=</span> <span class="n">station</span><span class="o">.</span><span class="n">health_sensor</span><span class="p">()</span><span class="o">.</span><span class="n">get_power_state_data</span><span class="p">()</span>
+            <span class="n">battery_charge_percentage</span> <span class="o">=</span> <span class="n">station</span><span class="o">.</span><span class="n">health_sensor</span><span class="p">()</span><span class="o">.</span><span class="n">get_battery_charge_remaining_data</span><span class="p">()</span>
+            <span class="n">internal_temp_c</span> <span class="o">=</span> <span class="n">station</span><span class="o">.</span><span class="n">health_sensor</span><span class="p">()</span><span class="o">.</span><span class="n">get_internal_temp_c_data</span><span class="p">()</span>
+
+            <span class="c1"># The channels share the same timestamps</span>
+            <span class="n">health_time_micros</span> <span class="o">=</span> <span class="n">station</span><span class="o">.</span><span class="n">health_sensor</span><span class="p">()</span><span class="o">.</span><span class="n">data_timestamps</span><span class="p">()</span> <span class="o">-</span> <span class="n">station</span><span class="o">.</span><span class="n">health_sensor</span><span class="p">()</span><span class="o">.</span><span class="n">first_data_timestamp</span><span class="p">()</span>
+            <span class="n">health_time_s</span> <span class="o">=</span> <span class="n">health_time_micros</span><span class="o">*</span><span class="mf">1E-6</span>
+
+</pre></div>
+</div>
+<p>We can also plot the state of health using the <a class="reference external" href="https://matplotlib.org/">Matplotlib</a> library.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">redvox.common.data_window</span> <span class="kn">import</span> <span class="n">DataWindow</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Input Directory</span>
+<span class="n">input_dir</span> <span class="o">=</span> <span class="s2">"path/to/redvox/data/dw_1648830257000498_2.pkl.lz4"</span>
+
+<span class="c1"># Load data window from report</span>
+<span class="n">dw</span> <span class="o">=</span> <span class="n">DataWindow</span><span class="o">.</span><span class="n">deserialize</span><span class="p">(</span><span class="n">input_dir</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">station</span> <span class="ow">in</span> <span class="n">dw</span><span class="o">.</span><span class="n">stations</span><span class="p">():</span>
+        <span class="c1"># Check that there is state of health data</span>
+        <span class="k">if</span> <span class="n">station</span><span class="o">.</span><span class="n">has_health_sensor</span><span class="p">():</span>
+
+            <span class="c1"># Get some state of health data - example of what is available</span>
+            <span class="n">power_state</span> <span class="o">=</span> <span class="n">station</span><span class="o">.</span><span class="n">health_sensor</span><span class="p">()</span><span class="o">.</span><span class="n">get_power_state_data</span><span class="p">()</span>
+            <span class="n">battery_charge_percentage</span> <span class="o">=</span> <span class="n">station</span><span class="o">.</span><span class="n">health_sensor</span><span class="p">()</span><span class="o">.</span><span class="n">get_battery_charge_remaining_data</span><span class="p">()</span>
+            <span class="n">internal_temp_c</span> <span class="o">=</span> <span class="n">station</span><span class="o">.</span><span class="n">health_sensor</span><span class="p">()</span><span class="o">.</span><span class="n">get_internal_temp_c_data</span><span class="p">()</span>
+
+            <span class="c1"># The channels share the same timestamps</span>
+            <span class="n">health_time_micros</span> <span class="o">=</span> <span class="n">station</span><span class="o">.</span><span class="n">health_sensor</span><span class="p">()</span><span class="o">.</span><span class="n">data_timestamps</span><span class="p">()</span> <span class="o">-</span> <span class="n">station</span><span class="o">.</span><span class="n">health_sensor</span><span class="p">()</span><span class="o">.</span><span class="n">first_data_timestamp</span><span class="p">()</span>
+            <span class="n">health_time_s</span> <span class="o">=</span> <span class="n">health_time_micros</span><span class="o">*</span><span class="mf">1E-6</span>
+
+            <span class="c1"># Plot the state of health data - one subplot per channel</span>
+            <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="s1">'col'</span><span class="p">)</span>
+
+            <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">health_time_s</span><span class="p">,</span> <span class="n">power_state</span><span class="p">)</span>
+            <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">health_time_s</span><span class="p">,</span> <span class="n">battery_charge_percentage</span><span class="p">)</span>
+            <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">health_time_s</span><span class="p">,</span> <span class="n">internal_temp_c</span><span class="p">)</span>
+
+            <span class="c1"># Set labels and subplot title</span>
+            <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'Power State'</span><span class="p">)</span>
+            <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'Batt. %'</span><span class="p">)</span>
+            <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'Int. temp. [C]'</span><span class="p">)</span>
+            <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Seconds from </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">dw</span><span class="o">.</span><span class="n">start_date</span><span class="p">()</span><span class="o">*</span><span class="mf">1E-6</span><span class="p">)</span><span class="si">}</span><span class="s2"> Unix epoch UTC"</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">f</span><span class="s2">"RedVox Station ID </span><span class="si">{</span><span class="n">station</span><span class="o">.</span><span class="n">id</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-output">
+<h2>Example output<a class="headerlink" href="#example-output" title="Permalink to this headline">#</a></h2>
+<p>After running the above code snippet, the following graph should appear:</p>
+<p><img alt="" src="_images/fig_ex_03.png"/></p>
+<p>For a more complete example on how to load the metadata and health sensor data, visit
+<a class="reference external" href="https://github.com/RedVoxInc/redvox-examples/blob/main/examples/ex_03_metadata_and_soh/load_metadata_soh.py">Github</a>.</p>
+<p>In the next section, we will take a look at <a class="reference internal" href="04_plot_wiggles.html"><span class="doc std std-doc">plotting audio waveforms</span></a>.</p>
+</div>
+</div>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="04_plot_wiggles.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Plot Audio Waveforms</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="02_other_sensors_from_report.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Load Other Sensor Data</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, RedVox, Inc.
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/RedVoxInc/redvox-examples" aria-label="GitHub">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Load Metadata and State of Health Data</a><ul>
+<li><a class="reference internal" href="#running-the-example">Running the example</a></li>
+<li><a class="reference internal" href="#example-output">Example output</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    </body>
+</html>
