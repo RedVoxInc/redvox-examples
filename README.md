@@ -3,6 +3,8 @@
 This repository is for case-studies, examples, and tutorials using the [redvox SDK](https://github.com/RedVoxInc/redvox-python-sdk)
 and [pandas pipeline](https://github.com/RedVoxInc/redpandas).
 
+Check out the [documentation](https://github.com/RedVoxInc/redvox-examples)
+
 We recommend you start with the [first example (ex_00 report_audio)](https://github.com/RedVoxInc/redvox-examples/tree/main/examples/ex_00_report_audio),
 which loads audio data from a [Redvox report downloaded from redvox.io](https://redvox.io/#/reports/E328).
 
