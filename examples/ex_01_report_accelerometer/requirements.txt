@@ -1,0 +1,4 @@
+# requirements.txt file per example.
+
+redvox==3.1.13
+matplotlib
