@@ -1,0 +1,5 @@
+# Libraries needed to build docs
+# Do not move/change because github action needs this requirements.txt inside the docs folder
+sphinx
+furo
+myst-parser

@@ -6,13 +6,6 @@
 - furo, the sphinx theme used
 - myst-parser, to parse markdown (.md) files to sphinx
 
-Get going with:
-```shell
-pip install m2r2
-pip install sphinx
-pip install furo
-pip install myst-parser
-```
 ### Editing the docs
 
 The meat of the documentation is in redvox-examples/docs/source. The `.md` files are the base of the documentation.
