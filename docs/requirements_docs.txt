@@ -1,4 +1,4 @@
 # Libraries needed to build docs
 # Do not move/change because github action needs this requirements.txt inside the docs folder
-furo
+furo==2022.4.7
 myst-parser
