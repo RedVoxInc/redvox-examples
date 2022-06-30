@@ -88,9 +88,9 @@ for station in dw.stations():
         ax[2].plot(magnetometer_time_s, magnetometer_z_samples)
     
         # Set labels and subplot title
-        ax[0].set_ylabel('Mag X [m/s]')
-        ax[1].set_ylabel('Mag Y [m/s]')
-        ax[2].set_ylabel('Mag Z [m/s]')
+        ax[0].set_ylabel(r'Mag X [$\mu T$]')
+        ax[1].set_ylabel(r'Mag Y [$\mu T$]')
+        ax[2].set_ylabel(r'Mag Z [$\mu T$]')
         ax[2].set_xlabel(f"Seconds from {int(dw.start_date()*1E-6)} Unix epoch UTC")
     
         plt.suptitle(f"RedVox Station ID {station.id()}")

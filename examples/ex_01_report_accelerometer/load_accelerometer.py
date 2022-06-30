@@ -18,7 +18,7 @@ MICROS_TO_S = 1E-6
 # Change input_dir the path of your data directory
 # input_dir = "/CHANGE/ME/DATA_2022/REDVOX_EXAMPLES"
 # Example:
-# input_dir = "/Users/mgarces/Documents/DATA_2022/REDVOX_EXAMPLES"
+input_dir = "/Users/mgarces/Documents/DATA_2022/REDVOX_EXAMPLES"
 
 # Name of the RedVox datawindow file you downloaded:
 INPUT_FILE = "dw_1648830257000498_2.pkl.lz4"
