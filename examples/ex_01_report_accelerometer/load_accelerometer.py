@@ -18,7 +18,7 @@ MICROS_TO_S = 1E-6
 # Change input_dir the path of your data directory
 # input_dir = "/CHANGE/ME/DATA_2022/REDVOX_EXAMPLES"
 # Example:
-input_dir = "/Users/mgarces/Documents/DATA_2022/REDVOX_EXAMPLES"
+# input_dir = "/Users/mgarces/Documents/DATA_2022/REDVOX_EXAMPLES"
 
 # Name of the RedVox datawindow file you downloaded:
 INPUT_FILE = "dw_1648830257000498_2.pkl.lz4"
@@ -58,9 +58,9 @@ def main() -> None:
         ax[2].plot(accelerometer_time_s, accelerometer_z_samples)
 
         # Set labels and subplot title
-        ax[0].set_ylabel('Acc X [m/s]')
-        ax[1].set_ylabel('Acc Y [m/s]')
-        ax[2].set_ylabel('Acc Z [m/s]')
+        ax[0].set_ylabel(r'Acc X [$m/s^2$]')
+        ax[1].set_ylabel(r'Acc Y [$m/s^2$]')
+        ax[2].set_ylabel(r'Acc Z [$m/s^2$]')
         ax[2].set_xlabel(f"Seconds from {int(dw.start_date()*MICROS_TO_S)} Unix epoch UTC")
 
         plt.suptitle(f"RedVox Station ID {station.id()}")
