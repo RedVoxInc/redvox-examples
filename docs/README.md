@@ -13,6 +13,7 @@ Please do not change/move.
 ### Editing the docs
 
 The meat of the documentation is in redvox-examples/docs/source. The `.md` files are the base of the documentation.
+You also need the conf.py file to be in the source directory.
 
 If you add new `.md` files, make sure that `index.rst` inside the `source` folder points to the new file using
 `.. toctree::`.
