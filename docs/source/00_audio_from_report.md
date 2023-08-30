@@ -7,11 +7,15 @@ In this example we will load and plot RedVox Audio data using DataWindow.
 The module [DataWindow](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#-redvox-python-sdk-datawindow-manual)
 in the [RedVox Python SDK](https://github.com/RedVoxInc/redvox-python-sdk) is designed to load both [raw API RedVox data](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#creating-datawindows) 
 and already created DataWindows (such as `dw_1648830257000498_2.pkl.lz4`) 
-[downloaded from a RedVox Report](getting_data_from_report.md).
+[downloaded from a RedVox Report](getting_data_from_report.md). 
+
+Please visit
+[DataWindow Examples](https://redvoxinc.github.io/datawindow-examples/index.html) for a tutorial on DataWindow.
 
 > **_NOTE:_**  This example (and the following ones) use the already created DataWindow downloaded from a RedVox report. 
 > If your starting point is raw RedVox data, visit 
-> [creating a DataWindow](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#creating-datawindows).
+> [creating a DataWindow](https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#creating-datawindows),
+> or check out the [Creating a Datawindow example](https://redvoxinc.github.io/datawindow-examples/00_create_data_window.html).
 
 ## Running the example
 
