@@ -213,14 +213,14 @@
           <div class="section" id="load-other-sensor-data">
 <h1>Load Other Sensor Data<a class="headerlink" href="#load-other-sensor-data" title="Permalink to this headline">#</a></h1>
 <p>The <a class="reference external" href="https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#-redvox-python-sdk-datawindow-manual">DataWindow</a>
-contains single-channel sensors, such as <a class="reference internal" href="00_audio_from_report.html"><span class="doc std std-doc">audio</span></a>, and three-channel sensors,
-such as <a class="reference internal" href="01_accelerometer_from_report.html"><span class="doc std std-doc">accelerometer</span></a>. In this example we will take a look at the general procedure
+contains single-channel sensors, such as <a class="reference internal" href="00_audio_from_report.html"><span class="std std-doc">audio</span></a>, and three-channel sensors,
+such as <a class="reference internal" href="01_accelerometer_from_report.html"><span class="std std-doc">accelerometer</span></a>. In this example we will take a look at the general procedure
 to obtain single-channel sensor data (barometer in this example), and three-channel sensor data, (magnetometer in this example).</p>
 <p>For more Sensors available in the DataWindow, check out the
 <a class="reference external" href="https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window/station#sensor-data-access">Sensor documentation</a>.</p>
 <div class="section" id="running-the-example">
 <h2>Running the example<a class="headerlink" href="#running-the-example" title="Permalink to this headline">#</a></h2>
-<p>The first step is to load <a class="reference internal" href="getting_data_from_report.html"><span class="doc std std-doc">RedVox data</span></a> in a
+<p>The first step is to load <a class="reference internal" href="getting_data_from_report.html"><span class="std std-doc">RedVox data</span></a> in a
 <a class="reference external" href="https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window#-redvox-python-sdk-datawindow-manual">DataWindow</a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">redvox.common.data_window</span> <span class="kn">import</span> <span class="n">DataWindow</span>
 
@@ -231,7 +231,7 @@ to obtain single-channel sensor data (barometer in this example), and three-chan
 <span class="n">dw</span> <span class="o">=</span> <span class="n">DataWindow</span><span class="o">.</span><span class="n">deserialize</span><span class="p">(</span><span class="n">input_dir</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Single-channel sensors such as the barometer sensor load the same way as the <a class="reference internal" href="00_audio_from_report.html"><span class="doc std std-doc">audio</span></a> sensor.</p>
+<p>Single-channel sensors such as the barometer sensor load the same way as the <a class="reference internal" href="00_audio_from_report.html"><span class="std std-doc">audio</span></a> sensor.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">redvox.common.data_window</span> <span class="kn">import</span> <span class="n">DataWindow</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
@@ -262,7 +262,7 @@ to obtain single-channel sensor data (barometer in this example), and three-chan
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Three-channel sensors such as the magnetometer sensor load the same as the <a class="reference internal" href="#"><span class="doc std std-doc">accelerometer</span></a> sensor.</p>
+<p>Three-channel sensors such as the magnetometer sensor load the same as the <a class="reference internal" href="#"><span class="std std-doc">accelerometer</span></a> sensor.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">redvox.common.data_window</span> <span class="kn">import</span> <span class="n">DataWindow</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
@@ -316,7 +316,7 @@ to obtain single-channel sensor data (barometer in this example), and three-chan
 <a class="reference external" href="https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window/station#sensor-data">Sensor Data Documentation</a>
 and the <a class="reference external" href="https://github.com/RedVoxInc/redvox-python-sdk/tree/master/docs/python_sdk/data_window/station#sensor-subclass-functions">Sensor Subclasses</a>
 to see what X, Y, Z data and other possible functions are available per sensor.</p>
-<p>The next example focuses on obtaining <a class="reference internal" href="03_metadata_soh_from_report.html"><span class="doc std std-doc">Metadata and state of health data</span></a>.</p>
+<p>The next example focuses on obtaining <a class="reference internal" href="03_metadata_soh_from_report.html"><span class="std std-doc">Metadata and state of health data</span></a>.</p>
 </div>
 </div>
 
